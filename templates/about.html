@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> Learn about me:</h1>
+<p>This is a template</p>
+<p>
+    {{ my_text }}
+    {{ my_number }}
+    <ul>
+        {% for item in my_list %}
+            {% if item == 3.14 %}
+                <li>{{ forloop.counter }} Pi</li>
+            {% elif item == 'Andrzej' %}
+                <li>{{ forloop.counter }} {{ item|add:' pupa'|upper }}</li>
+            {% else %}
+                <li>{{ forloop.counter }} {{ item }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</p>
+{% endblock %}

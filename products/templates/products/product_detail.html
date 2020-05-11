@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>abc{{ object.title }}</h1>
+
+<p>{% if object.description != None and object.description != '' %}{{ object.description }}
+    {% else %}Description will be soon{% endif%}</p>
+
+<p>{{ object.price }}</p>
+
+<form method="get" action="delete/">
+    <button type="submit">Delete product</button>
+</form>
+
+{% endblock %}

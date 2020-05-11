@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Update: {{ object.id }} - {{ object.title }}</a></h1>
+
+<form action="." method='POST'>{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="save"/>
+</form>
+
+<!--<form method="get" action="../../">-->
+<!--    <button type="submit">Back to list of courses</button>-->
+<!--</form>-->
+
+{% endblock %}
